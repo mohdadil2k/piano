@@ -27,11 +27,10 @@ function playAudio(){
     audio=new Audio(`${KEY_URL}key_${this.dataset.note}.mp3`)
     audio.play();
 }
-function stopAudio(e){
-    e.preventDefault()//to prevent the box from coming(in chrome) while pressing keys
+function stopAudio(){
     this.classList.remove('key-pressed')
-    audio.pause()
-    audio.currentTime=0;
+    // audio.pause();
+    // audio.currentTime=0;
 }
 function getSingleKey(key1){
     const div=document.createElement('div');
